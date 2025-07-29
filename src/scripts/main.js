@@ -8,9 +8,10 @@ for (const input of inputs) {
 
   label.className = 'field-label';
 
-  if (input.id) {
-    label.htmlFor = input.id;
+  if (!input.id) {
+    input.id = inputName + '-input'; // email-input, password-input
   }
+  label.htmlFor = input.id;
 
   const labelText = inputName.charAt(0).toUpperCase() + inputName.slice(1);
 
