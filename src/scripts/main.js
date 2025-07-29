@@ -7,7 +7,10 @@ for (const input of inputs) {
   const label = document.createElement('label');
 
   label.className = 'field-label';
-  label.htmlFor = input.id;
+
+  if (input.id) {
+    label.htmlFor = input.id;
+  }
 
   const labelText = inputName.charAt(0).toUpperCase() + inputName.slice(1);
 
